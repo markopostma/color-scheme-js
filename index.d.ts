@@ -2,10 +2,7 @@ export type SchemeColor = 'mono' | 'contrast' | 'triade' | 'tetrade' | 'analogic
 export type VariationColor = 'default' | 'pastel' | 'soft' | 'light' | 'hard' | 'pale'
 
 export interface SchemeOutput {
-    mono: ColorScheme
-    contrast: ColorScheme
-    triade: ColorScheme
-    tetrade: ColorScheme
+    [name: string]: ColorScheme
     analogic: ColorScheme & {
         add_complement(add: boolean): void
     }
